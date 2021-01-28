@@ -1,7 +1,7 @@
 module Liquidoc
   module Sanitizers
     class BaseSanitizer
-      HOOK      = /\{[\%\{][\<\:\w\s\-\>\"\'\d\=\%\|\/\.\,]+[\%\}]\}/
+      HOOK      = /\{[\%\{][\<\:\w\s\-\>\"\'\d\=\%\|\/\.\,\p{L}]+[\%\}]\}/
       TAG_START = /\{\%/
       TAG_END   = /\%\}/
 
