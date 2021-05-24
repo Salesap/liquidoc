@@ -1,7 +1,7 @@
 module Liquidoc
   class Template
     def initialize(content)
-      @template = Liquid::Template.parse(content, error_mode: :warn)
+      @template = Liquid::Template.parse(CGI.unescapeHTML(content), error_mode: :warn)
     end
 
     def render(context)
